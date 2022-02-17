@@ -458,3 +458,4 @@ logs
 obj
 bin
 appsettings.Development.json
+**/wwwroot/

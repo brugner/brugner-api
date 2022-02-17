@@ -36,7 +36,7 @@ namespace Brugner.API.Core.Services
                 throw new InvalidArgumentAPIException("Email or password invalid");
             }
 
-            return new AuthResultDTO()
+            return new AuthResultDTO
             {
                 Id = user.Id,
                 Email = user.Email,
