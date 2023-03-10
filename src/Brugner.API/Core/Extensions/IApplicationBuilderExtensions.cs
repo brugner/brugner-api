@@ -1,5 +1,4 @@
-﻿using System;
-using Brugner.API.Core.Contracts.Services;
+﻿using Brugner.API.Core.Contracts.Services;
 
 namespace Brugner.API.Core.Extensions
 {

@@ -1,6 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Brugner.API.Core.Models.DTOs.Posts
 {
@@ -29,9 +28,6 @@ namespace Brugner.API.Core.Models.DTOs.Posts
         [FromForm]
         [Required]
         public bool IsDraft { get; set; }
-
-        [FromForm]
-        public IFormFile? Thumbnail { get; set; } = default!;
 
         public override string ToString()
         {

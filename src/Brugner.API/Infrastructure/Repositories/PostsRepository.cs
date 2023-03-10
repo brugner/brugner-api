@@ -1,5 +1,4 @@
-﻿using System;
-using Brugner.API.Core.Contracts.Repositories;
+﻿using Brugner.API.Core.Contracts.Repositories;
 using Brugner.API.Core.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -53,7 +52,8 @@ namespace Brugner.API.Infrastructure.Repositories
 
             return rawTags
                 .SelectMany(x => x.Split(',', StringSplitOptions.RemoveEmptyEntries))
-                .Distinct();
+                .Distinct()
+                .OrderBy(x => x);
         }
 
         public async Task AddAsync(Post post)

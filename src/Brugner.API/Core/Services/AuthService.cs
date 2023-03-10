@@ -1,8 +1,4 @@
-﻿using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using Brugner.API.Core.Constants;
+﻿using Brugner.API.Core.Constants;
 using Brugner.API.Core.Contracts.Repositories;
 using Brugner.API.Core.Contracts.Services;
 using Brugner.API.Core.Exceptions;
@@ -11,6 +7,9 @@ using Brugner.API.Core.Models.Entities;
 using Brugner.API.Core.Options;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace Brugner.API.Core.Services
 {

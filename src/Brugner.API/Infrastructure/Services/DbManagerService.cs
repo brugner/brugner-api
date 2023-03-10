@@ -1,5 +1,4 @@
-﻿using System;
-using Bogus;
+﻿using Bogus;
 using Brugner.API.Core.Contracts.Services;
 using Brugner.API.Core.Extensions;
 using Brugner.API.Core.Models.Entities;
@@ -78,7 +77,6 @@ namespace Brugner.API.Infrastructure.Services
         {
             return new User()
             {
-                Id = 1,
                 Email = "editor1@brugner.com",
                 PasswordHash = "1000:RIGtm0DVzuZ4dEtiQncCm4LfujPS9iud:utqaw7AM6GNd4VcbGrplshEbAlE=",
                 FirstName = "Editor",
@@ -91,10 +89,8 @@ namespace Brugner.API.Infrastructure.Services
             var tags = new[] { "software", "short-story", "music", "movies", "stuff", "lyrics", "writing", "sci-fi", "thought" };
 
             var title = string.Empty;
-            int id = 1;
 
             var posts = new Faker<Post>()
-                .RuleFor(x => x.Id, faker => id++)
                 .RuleFor(x => x.Title, faker =>
                 {
                     title = faker.Commerce.ProductAdjective() + " " + faker.Commerce.ProductName();

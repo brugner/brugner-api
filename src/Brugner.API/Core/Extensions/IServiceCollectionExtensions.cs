@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text;
-using Brugner.API.Core.Contracts.Repositories;
+﻿using Brugner.API.Core.Contracts.Repositories;
 using Brugner.API.Core.Contracts.Services;
 using Brugner.API.Core.Options;
 using Brugner.API.Core.Services;
@@ -9,6 +7,7 @@ using Brugner.API.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text;
 
 namespace Brugner.API.Core.Extensions
 {
@@ -23,7 +22,6 @@ namespace Brugner.API.Core.Extensions
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IHashService, HashService>();
             services.AddScoped<IPostsService, PostsService>();
-            services.AddScoped<IFilesService, FilesService>();
             services.AddScoped<IDbManagerService, DbManagerService>();
 
             services.AddScoped<IUsersRepository, UsersRepository>();

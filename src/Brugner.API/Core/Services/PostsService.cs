@@ -1,5 +1,4 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using Brugner.API.Core.Contracts.Repositories;
 using Brugner.API.Core.Contracts.Services;
 using Brugner.API.Core.Exceptions;
@@ -12,13 +11,11 @@ namespace Brugner.API.Core.Services
     public class PostsService : IPostsService
     {
         private readonly IPostsRepository _postsRepository;
-        private readonly IFilesService _filesService;
         private readonly IMapper _mapper;
 
-        public PostsService(IPostsRepository postsRepository, IFilesService filesService, IMapper mapper)
+        public PostsService(IPostsRepository postsRepository, IMapper mapper)
         {
             _postsRepository = postsRepository;
-            _filesService = filesService;
             _mapper = mapper;
         }
 
@@ -58,7 +55,6 @@ namespace Brugner.API.Core.Services
             var post = _mapper.Map<Post>(postForCreation);
             post.Slug = await SetSlugAsync(post.Title);
             post.CreatedAt = DateTime.Now;
-            post.Thumbnail = await _filesService.SavePostThumbnailAsync(post.Id, postForCreation.Thumbnail);
 
             await _postsRepository.AddAsync(post);
             await _postsRepository.SaveChangesAsync();
@@ -78,7 +74,6 @@ namespace Brugner.API.Core.Services
             _mapper.Map(postForUpdate, post);
 
             post.UpdatedAt = DateTime.Now;
-            post.Thumbnail = await _filesService.SavePostThumbnailAsync(post.Id, postForUpdate.Thumbnail);
 
             await _postsRepository.SaveChangesAsync();
 
@@ -96,8 +91,6 @@ namespace Brugner.API.Core.Services
 
             _postsRepository.Remove(post);
             await _postsRepository.SaveChangesAsync();
-
-            await Task.Run(() => _filesService.DeletePostThumbnail(id));
         }
 
         public async Task<IEnumerable<string>> GetAllTagsAsync()

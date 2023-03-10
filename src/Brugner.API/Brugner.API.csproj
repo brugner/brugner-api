@@ -4,88 +4,39 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>232d1dac-32d0-4ed5-96f0-52543e87aec7</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<DockerfileContext>.</DockerfileContext>
+	<DockerfileFile>..\..\Dockerfile</DockerfileFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-    <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
-    <PackageReference Include="AspNetCoreRateLimit" Version="4.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.2">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
     <PackageReference Include="Ardalis.ApiEndpoints" Version="4.0.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.2.3" />
-    <PackageReference Include="AutoMapper" Version="11.0.1" />
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
-    <PackageReference Include="Bogus" Version="34.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.2" />
+    <PackageReference Include="AspNetCoreRateLimit" Version="5.0.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.26.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Serilog" />
-    <None Remove="Serilog.AspNetCore" />
-    <None Remove="AspNetCoreRateLimit" />
-    <None Remove="Infrastructure\" />
-    <None Remove="Microsoft.EntityFrameworkCore" />
-    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
-    <None Remove="Pomelo.EntityFrameworkCore.MySql" />
-    <None Remove="Endpoints\" />
-    <None Remove="Endpoints\Tests\" />
-    <None Remove="Ardalis.ApiEndpoints" />
-    <None Remove="Swashbuckle.AspNetCore.Annotations" />
-    <None Remove="Core\" />
-    <None Remove="Core\Models\" />
-    <None Remove="Core\Models\Entities\" />
-    <None Remove="Infrastructure\EntitiesConfiguration\" />
-    <None Remove="Core\Contracts\" />
-    <None Remove="Core\Contracts\Services\" />
-    <None Remove="Core\Models\DTOs\" />
-    <None Remove="Core\Models\DTOs\Auth\" />
-    <None Remove="Core\Services\" />
-    <None Remove="Core\Contracts\Repositories\" />
-    <None Remove="Core\Models\DTOs\Posts\" />
-    <None Remove="Core\Options\" />
-    <None Remove="Core\Extensions\" />
-    <None Remove="AutoMapper" />
-    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
-    <None Remove="Infrastructure\Repositories\" />
-    <None Remove="Core\Constants\" />
-    <None Remove="Infrastructure\Services\" />
-    <None Remove="Bogus" />
-    <None Remove="Core\Exceptions\" />
-    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
-    <None Remove="Endpoints\Error\" />
-    <None Remove="Core\MappingProfiles\" />
-    <None Remove="Endpoints\Auth\" />
-    <None Remove="Endpoints\Posts\" />
+    <Folder Include="Infrastructure\Migrations\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Infrastructure\" />
-    <Folder Include="Endpoints\" />
-    <Folder Include="Endpoints\Health\" />
-    <Folder Include="Core\" />
-    <Folder Include="Core\Models\" />
-    <Folder Include="Core\Models\Entities\" />
-    <Folder Include="Infrastructure\EntitiesConfiguration\" />
-    <Folder Include="Core\Contracts\" />
-    <Folder Include="Core\Contracts\Services\" />
-    <Folder Include="Core\Models\DTOs\" />
-    <Folder Include="Core\Models\DTOs\Auth\" />
-    <Folder Include="Core\Services\" />
-    <Folder Include="Core\Contracts\Repositories\" />
-    <Folder Include="Core\Models\DTOs\Posts\" />
-    <Folder Include="Core\Options\" />
-    <Folder Include="Core\Extensions\" />
-    <Folder Include="Infrastructure\Repositories\" />
-    <Folder Include="Core\Constants\" />
-    <Folder Include="Infrastructure\Services\" />
-    <Folder Include="Core\Exceptions\" />
-    <Folder Include="Endpoints\Error\" />
-    <Folder Include="Core\MappingProfiles\" />
-    <Folder Include="Endpoints\Auth\" />
-    <Folder Include="Endpoints\Posts\" />
-  </ItemGroup>
+
 </Project>

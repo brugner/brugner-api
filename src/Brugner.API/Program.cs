@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 string cstr = builder.Configuration.GetConnectionString("Default");
-builder.Services.AddDbContext<BrugnerDbContext>(options => options.UseMySql(cstr, ServerVersion.AutoDetect(cstr)));
+builder.Services.AddDbContext<BrugnerDbContext>(options => options.UseSqlServer(cstr));
 
 builder.Services.AddCors(options =>
 {

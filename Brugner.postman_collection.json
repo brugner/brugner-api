@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e7f9a934-f95f-40ec-955e-b5cd34f8b272",
+		"_postman_id": "e7a1fea9-dbb9-4775-b56a-1dea86704e7f",
 		"name": "Brugner",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -28,7 +28,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"editor1@brugner.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"raw": "{\r\n    \"email\": \"editor1@bruner.com\",\r\n    \"password\": \"12345678\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -247,14 +247,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/posts/slug/gorgeous-practical-cotton-hat",
+							"raw": "{{baseUrl}}/posts/slug/handmade-refined-wooden-keyboard",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"posts",
 								"slug",
-								"gorgeous-practical-cotton-hat"
+								"handmade-refined-wooden-keyboard"
 							]
 						}
 					},
@@ -306,7 +306,7 @@
 								{
 									"key": "thumbnail",
 									"type": "file",
-									"src": []
+									"src": "/F:/Pictures/To think/297.jpg"
 								}
 							],
 							"options": {
@@ -373,7 +373,7 @@
 								{
 									"key": "thumbnail",
 									"type": "file",
-									"src": []
+									"src": "/F:/Pictures/To think/297.jpg"
 								}
 							],
 							"options": {

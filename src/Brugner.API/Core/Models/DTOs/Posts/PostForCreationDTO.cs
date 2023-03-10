@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Brugner.API.Core.Models.DTOs.Posts
 {
@@ -19,8 +18,6 @@ namespace Brugner.API.Core.Models.DTOs.Posts
 
         [Required]
         public bool IsDraft { get; set; }
-
-        public IFormFile? Thumbnail { get; set; } = default!;
 
         public override string ToString()
         {

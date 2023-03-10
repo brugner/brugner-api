@@ -1,5 +1,4 @@
-﻿using System;
-namespace Brugner.API.Core.Models.DTOs.Posts
+﻿namespace Brugner.API.Core.Models.DTOs.Posts
 {
     public class PostDTO
     {
@@ -10,7 +9,6 @@ namespace Brugner.API.Core.Models.DTOs.Posts
         public string Slug { get; set; } = default!;
         public string[] Tags { get; set; } = default!;
         public bool IsDraft { get; set; }
-        public string? Thumbnail { get; set; } = default!;
         public DateTimeOffset CreatedAt { get; set; }
         public DateTimeOffset? UpdatedAt { get; set; }
 
